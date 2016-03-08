@@ -11,3 +11,26 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias ez="vim ~/.zshrc"
+alias az="source ~/.zshrc"
+alias v="vim"
+alias ll="ls -alh"
+alias mc="make clean"
+alias m="make -j9"
+alias mt="make test"
+alias c="mc && m"
+alias dc="cd"
+alias sl="ls"
+alias l="ls -alh"
+alias at="tmux source-file ~/.tmux.conf"
+alias et="vim ~/.tmux.conf.local"
+
+wd() {
+  . /Users/$USER/bin/wd/wd.sh
+}
+
+# Environment variable
+export PATH=$PATH:~/bin
+
+# Extra setup
+setopt no_rm_star_silent
